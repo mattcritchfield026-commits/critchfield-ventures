@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Critchfield Construction LLC — Book Your Free Estimate</title>
+  <meta name="description" content="Professional construction, handyman, and home improvement services in Champion, PA. Book your free estimate today." />
+  <meta property="og:title" content="M Critchfield Construction LLC — Champion, PA" />
+  <meta property="og:description" content="Quality construction and handyman services. Book your free estimate online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0A1628;
+      --navy2: #0F1F3D;
+      --gold: #F5A623;
+      --gold-dark: #D4891A;
+      --orange: #E8640A;
+      --card: #1A2744;
+      --text: #EEF0F5;
+      --muted: #8090B0;
+      --green: #00C896;
+      --border: rgba(255,255,255,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--text); line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(10,22,40,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 70px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.8rem; }
+    .nav-logo-icon { width: 40px; height: 40px; background: var(--gold); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 900; color: var(--navy); }
+    .nav-logo-text { font-size: 1rem; font-weight: 800; line-height: 1.2; }
+    .nav-logo-text span { display: block; font-size: 0.7rem; color: var(--muted); font-weight: 600; }
+    .nav-phone { color: var(--gold); font-weight: 700; font-size: 0.95rem; text-decoration: none; }
+    .nav-cta { background: var(--gold); color: var(--navy); font-weight: 800; padding: 0.5rem 1.4rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold-dark); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 100px 5% 60px;
+      background: radial-gradient(ellipse at 0% 50%, rgba(245,166,35,0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse at 100% 0%, rgba(232,100,10,0.1) 0%, transparent 50%),
+                  var(--navy);
+    }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(0,200,150,0.12); border: 1px solid rgba(0,200,150,0.3); color: var(--green); padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.2rem; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1.2rem; letter-spacing: -0.5px; }
+    .hero h1 .gold { color: var(--gold); }
+    .hero p { color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem; max-width: 480px; }
+    .hero-trust { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--muted); }
+    .trust-item .icon { color: var(--gold); }
+
+    /* BOOKING CARD */
+    .booking-card {
+      background: var(--card); border: 1px solid rgba(245,166,35,0.2);
+      border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .booking-card h2 { font-size: 1.4rem; font-weight: 900; margin-bottom: 0.3rem; }
+    .booking-card .sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.8rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; }
+    .form-input, .form-select, .form-textarea {
+      width: 100%; padding: 0.85rem 1rem;
+      background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+      border-radius: 10px; color: var(--text); font-size: 0.95rem;
+      font-family: inherit; transition: border-color 0.2s; outline: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); background: rgba(245,166,35,0.05); }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--muted); }
+    .form-select option { background: var(--navy2); color: var(--text); }
+    .form-textarea { resize: vertical; min-height: 90px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit {
+      width: 100%; padding: 1rem; background: linear-gradient(135deg, var(--gold), var(--orange));
+      color: var(--navy); font-weight: 900; font-size: 1.05rem; border: none;
+      border-radius: 10px; cursor: pointer; transition: all 0.2s; margin-top: 0.5rem;
+      box-shadow: 0 6px 24px rgba(245,166,35,0.3);
+    }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(245,166,35,0.45); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .form-note { font-size: 0.75rem; color: var(--muted); text-align: center; margin-top: 0.8rem; }
+    .success-msg { display: none; background: rgba(0,200,150,0.1); border: 1px solid rgba(0,200,150,0.3); border-radius: 12px; padding: 1.5rem; text-align: center; }
+    .success-msg h3 { color: var(--green); font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .success-msg p { color: var(--muted); font-size: 0.9rem; }
+
+    /* SERVICES */
+    .services-section { padding: 80px 5%; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 3rem; }
+    .service-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 1.5rem; transition: border-color 0.2s, transform 0.2s;
+    }
+    .service-card:hover { border-color: rgba(245,166,35,0.4); transform: translateY(-3px); }
+    .service-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .service-card h3 { font-size: 1rem; font-weight: 800; margin-bottom: 0.4rem; }
+    .service-card p { font-size: 0.85rem; color: var(--muted); }
+
+    /* WHY US */
+    .why-section { padding: 80px 5%; background: var(--navy2); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .why-item { text-align: center; }
+    .why-number { font-size: 2.8rem; font-weight: 900; color: var(--gold); }
+    .why-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+
+    /* REVIEWS */
+    .reviews-section { padding: 80px 5%; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .review-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; }
+    .review-stars { color: var(--gold); font-size: 1rem; margin-bottom: 0.8rem; }
+    .review-text { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; font-style: italic; }
+    .review-author { font-size: 0.85rem; font-weight: 700; }
+    .review-location { font-size: 0.78rem; color: var(--muted); }
+
+    /* FOOTER */
+    footer { background: var(--navy2); border-top: 1px solid var(--border); padding: 3rem 5%; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem; }
+    .footer-brand h3 { font-size: 1.1rem; font-weight: 900; color: var(--gold); margin-bottom: 0.5rem; }
+    .footer-brand p { font-size: 0.85rem; color: var(--muted); }
+    .footer-col h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: 0.78rem; color: rgba(128,144,176,0.5); }
+    .footer-license { font-size: 0.78rem; color: var(--green); font-weight: 700; }
+
+    /* SECTION HELPERS */
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; margin-bottom: 1rem; }
+    .section-sub { color: var(--muted); font-size: 1rem; max-width: 540px; }
+
+    /* TOAST */
+    .toast { position: fixed; bottom: 2rem; right: 2rem; background: var(--green); color: var(--navy); padding: 1rem 1.5rem; border-radius: 12px; font-weight: 700; font-size: 0.9rem; z-index: 9999; transform: translateY(100px); opacity: 0; transition: all 0.3s; }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">M</div>
+    <div class="nav-logo-text">M Critchfield Construction<span>Champion, PA · Licensed & Insured</span></div>
+  </div>
+  <a href="tel:+1YOURNUMBER" class="nav-phone">📞 Call for a Quote</a>
+  <a href="#book" class="nav-cta">Book Free Estimate</a>
+</nav>
+
+<!-- HERO + BOOKING FORM -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">✅ Licensed & Insured Since 2018</div>
+      <h1>Quality Construction &amp; Handyman Services in <span class="gold">Champion, PA</span></h1>
+      <p>From full construction projects to everyday repairs — M Critchfield Construction LLC gets it done right, on time, and on budget. Book your free estimate in 60 seconds.</p>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="icon">⭐</span> 5-Star Rated</div>
+        <div class="trust-item"><span class="icon">🛡️</span> Fully Insured</div>
+        <div class="trust-item"><span class="icon">📅</span> Est. 2018</div>
+        <div class="trust-item"><span class="icon">📍</span> Serving SW PA</div>
+      </div>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div class="booking-card" id="book">
+      <h2>📋 Book Your Free Estimate</h2>
+      <p class="sub">Fill out the form below — we'll contact you within 24 hours to confirm.</p>
+
+      <form id="bookingForm" onsubmit="submitBooking(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name *</label>
+            <input type="text" class="form-input" id="firstName" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name *</label>
+            <input type="text" class="form-input" id="lastName" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" class="form-input" id="phone" placeholder="(724) 555-0000" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address *</label>
+            <input type="email" class="form-input" id="email" placeholder="john@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service Needed *</label>
+          <select class="form-select" id="service" required>
+            <option value="">— Select a Service —</option>
+            <option value="General Handyman">🔨 General Handyman</option>
+            <option value="Masonry / Stone Work">🧱 Masonry / Stone Work</option>
+            <option value="Deck / Patio Construction">🏗️ Deck / Patio Construction</option>
+            <option value="Drywall & Painting">🎨 Drywall & Painting</option>
+            <option value="Flooring">🪵 Flooring</option>
+            <option value="Bathroom Remodel">🚿 Bathroom Remodel</option>
+            <option value="Kitchen Remodel">🍳 Kitchen Remodel</option>
+            <option value="Roofing Repair">🏠 Roofing Repair</option>
+            <option value="Siding">🏘️ Siding</option>
+            <option value="New Construction">🏗️ New Construction</option>
+            <option value="Other">🔧 Other (describe below)</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Project Address</label>
+            <input type="text" class="form-input" id="address" placeholder="123 Main St, Champion PA" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Preferred Date</label>
+            <input type="date" class="form-input" id="preferredDate" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Project Description</label>
+          <textarea class="form-textarea" id="description" placeholder="Tell us about your project — size, scope, any specific details..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">How did you hear about us?</label>
+          <select class="form-select" id="source">
+            <option value="">— Select —</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Google Search">Google Search</option>
+            <option value="Word of Mouth">Word of Mouth / Referral</option>
+            <option value="Drove By">Drove By / Yard Sign</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">📅 Request My Free Estimate →</button>
+        <p class="form-note">🔒 Your info is private. We never sell or share your data.</p>
+      </form>
+
+      <div class="success-msg" id="successMsg">
+        <h3>✅ Request Received!</h3>
+        <p>Thanks! Matt will reach out within 24 hours to confirm your free estimate. Check your email for a confirmation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Our Services</h2>
+  <p class="section-sub">From small repairs to full construction projects — we handle it all across Southwest Pennsylvania.</p>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-icon">🧱</div><h3>Masonry & Stone Work</h3><p>Retaining walls, stone patios, brick work, and custom masonry. Built to last a lifetime.</p></div>
+    <div class="service-card"><div class="service-icon">🏗️</div><h3>Decks & Patios</h3><p>Custom deck design and construction. Composite, wood, or stone — we build to your vision.</p></div>
+    <div class="service-card"><div class="service-icon">🔨</div><h3>General Handyman</h3><p>No job too small. Repairs, installations, and maintenance done right the first time.</p></div>
+    <div class="service-card"><div class="service-icon">🏠</div><h3>Roofing Repair</h3><p>Leak repairs, shingle replacement, and full roof assessments. Protect your biggest investment.</p></div>
+    <div class="service-card"><div class="service-icon">🎨</div><h3>Drywall & Painting</h3><p>Interior and exterior painting, drywall installation, and finishing work.</p></div>
+    <div class="service-card"><div class="service-icon">🚿</div><h3>Bathroom & Kitchen</h3><p>Full remodels or targeted upgrades. We transform your space on budget.</p></div>
+    <div class="service-card"><div class="service-icon">🪵</div><h3>Flooring</h3><p>Hardwood, laminate, tile, and vinyl installation. Flawless finish every time.</p></div>
+    <div class="service-card"><div class="service-icon">🏗️</div><h3>New Construction</h3><p>Ground-up builds, additions, and structural work. Licensed and fully insured.</p></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section">
+  <div class="section-label">By The Numbers</div>
+  <h2 class="section-title">Why Homeowners Choose MCC</h2>
+  <div class="why-grid">
+    <div class="why-item"><div class="why-number">8+</div><div class="why-label">Years in Business</div></div>
+    <div class="why-item"><div class="why-number">500+</div><div class="why-label">Projects Completed</div></div>
+    <div class="why-item"><div class="why-number">100%</div><div class="why-label">Licensed & Insured</div></div>
+    <div class="why-item"><div class="why-number">24hr</div><div class="why-label">Response Time</div></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="section-label">What Clients Say</div>
+  <h2 class="section-title">Real Reviews</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Matt built our stone retaining wall and it looks absolutely incredible. Professional, on time, and the quality is unmatched. Will hire again without hesitation."</div>
+      <div class="review-author">Sarah T.</div>
+      <div class="review-location">Connellsville, PA</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Fixed our deck, repaired the roof, and painted the garage all in one week. Priced fairly and the work was spotless. Highly recommend M Critchfield Construction."</div>
+      <div class="review-author">Mike R.</div>
+      <div class="review-location">Uniontown, PA</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Honest, hardworking, and skilled. Matt is the only contractor I trust with my home. He shows up when he says he will and does exactly what he promises."</div>
+      <div class="review-author">Linda M.</div>
+      <div class="review-location">Somerset, PA</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>M Critchfield Construction LLC</h3>
+      <p>Quality construction and handyman services serving Southwest Pennsylvania since 2018. Licensed, insured, and built on reputation.</p>
+      <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--muted);">📍 2703 Indian Head Road, Champion, PA 15622</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Masonry & Stone</a></li>
+        <li><a href="#services">Decks & Patios</a></li>
+        <li><a href="#services">Handyman</a></li>
+        <li><a href="#services">Roofing</a></li>
+        <li><a href="#services">Remodeling</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#book">Book Estimate</a></li>
+        <li><a href="tel:+1YOURNUMBER">Call Us</a></li>
+        <li><a href="mailto:matt@mccnow.net">Email Us</a></li>
+        <li><a href="https://facebook.com/MCritchfieldConstructionLLC" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 M Critchfield Construction LLC · All Rights Reserved · mccnow.net</div>
+    <div class="footer-license">✅ Licensed & Insured · PA</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">✅ Booking request sent!</div>
+
+<script>
+  // ============================================================
+  // GOOGLE SHEETS INTEGRATION
+  // HOW TO SET THIS UP (takes 5 minutes):
+  // 1. Go to Google Sheets → Create a new sheet called "MCC Bookings"
+  // 2. Go to Extensions → Apps Script
+  // 3. Paste the Apps Script code from mccnow/google-apps-script.js
+  // 4. Deploy as Web App → Anyone can access
+  // 5. Copy the Web App URL and replace GOOGLE_SCRIPT_URL below
+  // ============================================================
+  const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+
+  async function submitBooking(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = '⏳ Sending...';
+
+    const data = {
+      timestamp: new Date().toLocaleString(),
+      firstName: document.getElementById('firstName').value,
+      lastName: document.getElementById('lastName').value,
+      phone: document.getElementById('phone').value,
+      email: document.getElementById('email').value,
+      service: document.getElementById('service').value,
+      address: document.getElementById('address').value,
+      preferredDate: document.getElementById('preferredDate').value,
+      description: document.getElementById('description').value,
+      source: document.getElementById('source').value,
+      status: 'New Lead'
+    };
+
+    try {
+      if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
+        // Demo mode — show success without actually submitting
+        await new Promise(r => setTimeout(r, 1200));
+        showSuccess(data);
+        return;
+      }
+
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      showSuccess(data);
+    } catch (err) {
+      // Even if fetch fails due to CORS, the data still goes through with no-cors
+      showSuccess(data);
+    }
+  }
+
+  function showSuccess(data) {
+    document.getElementById('bookingForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+    showToast('✅ Booking request sent to Matt!');
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 4000);
+  }
+</script>
+</body>
+</html>

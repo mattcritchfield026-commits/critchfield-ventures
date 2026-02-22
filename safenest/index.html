@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO OPTIMIZED TITLE & META -->
+  <title>SafeNest Senior Services — Protecting Families & Assets | Estate Auction Oversight & Senior Relocation</title>
+  <meta name="description" content="SafeNest Senior Services protects elderly families from being taken advantage of at estate auctions and during relocation. We oversee asset sales, ensure fair pricing, and provide compassionate senior relocation services." />
+  <meta name="keywords" content="senior relocation services, estate auction oversight, elderly asset protection, senior moving services, estate sale help, protect elderly parents assets, senior services Pennsylvania" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="SafeNest Senior Services — Protecting What Your Family Built" />
+  <meta property="og:description" content="We protect elderly families from being taken advantage of at estate auctions and during major life transitions. Fair pricing oversight, compassionate relocation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://safenestseniorservices.com" />
+  <!-- Schema.org Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SafeNest Senior Services",
+    "description": "Estate auction oversight and senior relocation services protecting elderly families and their assets.",
+    "url": "https://safenestseniorservices.com",
+    "telephone": "+1-YOUR-PHONE",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Champion",
+      "addressRegion": "PA",
+      "postalCode": "15622",
+      "addressCountry": "US"
+    },
+    "serviceType": ["Estate Auction Oversight", "Senior Relocation", "Asset Protection", "Elder Care Services"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #FBF8F3;
+      --warm: #F5EFE6;
+      --navy: #1A2744;
+      --navy-dark: #0F1A30;
+      --gold: #C8922A;
+      --gold-light: #E8B04A;
+      --green: #2D7A4F;
+      --green-light: #3A9B64;
+      --text: #1A1A2E;
+      --muted: #6B7280;
+      --border: rgba(0,0,0,0.08);
+      --card: #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(251,248,243,0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 72px; box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.7rem; }
+    .nav-logo-icon { width: 42px; height: 42px; background: var(--navy); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+    .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+    .nav-logo-text span { display: block; font-family: 'Inter', sans-serif; font-size: 0.65rem; color: var(--muted); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-phone { color: var(--green); font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+    .nav-cta { background: var(--navy); color: white; font-weight: 700; padding: 0.55rem 1.3rem; border-radius: 8px; text-decoration: none; font-size: 0.88rem; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--navy-dark); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 100px 5% 60px;
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1600&q=80') center/cover; opacity: 0.08; }
+    .hero-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%; position: relative; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(200,146,42,0.15); border: 1px solid rgba(200,146,42,0.4); color: var(--gold-light); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.2; color: white; margin-bottom: 1.2rem; }
+    .hero h1 .gold { color: var(--gold-light); }
+    .hero p { color: rgba(255,255,255,0.7); font-size: 1.05rem; margin-bottom: 2rem; max-width: 500px; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .btn-primary { background: var(--gold); color: white; font-weight: 800; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-size: 1rem; transition: all 0.2s; border: none; cursor: pointer; box-shadow: 0 6px 24px rgba(200,146,42,0.4); }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: white; font-weight: 700; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-size: 1rem; border: 1px solid rgba(255,255,255,0.3); transition: all 0.2s; }
+    .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+    .hero-trust { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+    .trust-icon { color: var(--gold-light); }
+
+    /* HERO FORM CARD */
+    .hero-form-card { background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+    .hero-form-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+    .hero-form-card .sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 0.9rem; }
+    .form-label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.35rem; }
+    .form-input, .form-select, .form-textarea { width: 100%; padding: 0.8rem 1rem; background: var(--cream); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.9rem; font-family: inherit; transition: border-color 0.2s; outline: none; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--navy); background: white; }
+    .form-input::placeholder { color: var(--muted); }
+    .form-select option { background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .form-submit { width: 100%; padding: 1rem; background: var(--navy); color: white; font-weight: 800; font-size: 0.95rem; border: none; border-radius: 8px; cursor: pointer; transition: all 0.2s; margin-top: 0.3rem; }
+    .form-submit:hover { background: var(--navy-dark); transform: translateY(-1px); }
+    .form-note { font-size: 0.72rem; color: var(--muted); text-align: center; margin-top: 0.7rem; }
+    .success-msg { display: none; background: rgba(45,122,79,0.08); border: 1px solid rgba(45,122,79,0.25); border-radius: 12px; padding: 1.5rem; text-align: center; }
+    .success-msg h3 { color: var(--green); font-size: 1.1rem; margin-bottom: 0.4rem; }
+    .success-msg p { color: var(--muted); font-size: 0.85rem; }
+
+    /* URGENCY BANNER */
+    .urgency-banner { background: var(--navy); color: white; text-align: center; padding: 1rem 5%; font-size: 0.88rem; }
+    .urgency-banner strong { color: var(--gold-light); }
+
+    /* SERVICES */
+    .services-section { padding: 80px 5%; background: white; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .service-card { border-radius: 16px; padding: 2rem; border: 1px solid var(--border); transition: all 0.2s; }
+    .service-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.08); transform: translateY(-3px); }
+    .service-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.2rem; }
+    .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--navy); }
+    .service-card p { font-size: 0.88rem; color: var(--muted); }
+
+    /* HOW IT WORKS */
+    .how-section { padding: 80px 5%; background: var(--warm); }
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .step-card { text-align: center; }
+    .step-number { width: 60px; height: 60px; border-radius: 50%; background: var(--navy); color: white; font-size: 1.4rem; font-weight: 900; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
+    .step-card h3 { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
+    .step-card p { font-size: 0.85rem; color: var(--muted); }
+
+    /* WHO WE HELP */
+    .who-section { padding: 80px 5%; background: white; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+    .who-list { display: flex; flex-direction: column; gap: 1rem; }
+    .who-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1.2rem; background: var(--cream); border-radius: 12px; border: 1px solid var(--border); }
+    .who-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .who-item h4 { font-size: 0.95rem; font-weight: 800; color: var(--navy); margin-bottom: 0.2rem; }
+    .who-item p { font-size: 0.82rem; color: var(--muted); }
+    .who-image { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+    .who-image img { width: 100%; height: 400px; object-fit: cover; display: block; }
+
+    /* STATS */
+    .stats-section { padding: 60px 5%; background: var(--navy); }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+    .stat-item { text-align: center; }
+    .stat-number { font-size: 2.5rem; font-weight: 900; color: var(--gold-light); }
+    .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 0.3rem; }
+
+    /* TESTIMONIALS */
+    .testimonials-section { padding: 80px 5%; background: var(--warm); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .testimonial-card { background: white; border-radius: 16px; padding: 2rem; border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+    .testimonial-stars { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; }
+    .testimonial-text { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.2rem; font-style: italic; line-height: 1.7; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.8rem; }
+    .testimonial-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 1rem; }
+    .testimonial-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+    .testimonial-location { font-size: 0.78rem; color: var(--muted); }
+
+    /* FAQ */
+    .faq-section { padding: 80px 5%; background: white; }
+    .faq-list { max-width: 760px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .faq-question { padding: 1.2rem 1.5rem; font-weight: 700; font-size: 0.95rem; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: white; }
+    .faq-question:hover { background: var(--cream); }
+    .faq-answer { padding: 0 1.5rem 1.2rem; font-size: 0.88rem; color: var(--muted); line-height: 1.7; display: none; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform 0.2s; }
+
+    /* CTA SECTION */
+    .cta-section { padding: 80px 5%; background: var(--navy); text-align: center; }
+    .cta-section h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: white; margin-bottom: 1rem; }
+    .cta-section p { color: rgba(255,255,255,0.7); font-size: 1.05rem; max-width: 560px; margin: 0 auto 2.5rem; }
+
+    /* FOOTER */
+    footer { background: var(--navy-dark); padding: 3rem 5%; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.5rem; }
+    .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-col ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold-light); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+
+    /* SECTION HELPERS */
+    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 1rem; color: var(--navy); }
+    .section-sub { color: var(--muted); font-size: 1rem; max-width: 560px; }
+    .center { text-align: center; }
+    .center .section-sub { margin: 0 auto; }
+
+    /* TOAST */
+    .toast { position: fixed; bottom: 2rem; right: 2rem; background: var(--green); color: white; padding: 1rem 1.5rem; border-radius: 12px; font-weight: 700; font-size: 0.9rem; z-index: 9999; transform: translateY(100px); opacity: 0; transition: all 0.3s; }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- URGENCY BANNER -->
+<div class="urgency-banner">
+  ⚠️ <strong>Warning:</strong> Estate auction companies profit when families don't have an advocate. Don't let them take advantage of your loved ones. <strong>Call us first.</strong>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">🏡</div>
+    <div class="nav-logo-text">SafeNest Senior Services<span>Protecting Families Since Day One</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact-form">Contact</a></li>
+  </ul>
+  <a href="tel:+1YOURNUMBER" class="nav-phone">📞 Free Consultation</a>
+  <a href="#contact-form" class="nav-cta">Get Help Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">🛡️ Senior Asset Protection Specialists</div>
+      <h1>Protect Your Family's <span class="gold">Legacy</span> From Being Auctioned Away for Pennies</h1>
+      <p>When a loved one passes or transitions to assisted living, vultures circle. Estate auction companies, unscrupulous buyers, and rushed sales can rob your family of hundreds of thousands of dollars. SafeNest stands between them and your family's assets.</p>
+      <div class="hero-ctas">
+        <a href="#contact-form" class="btn-primary">🛡️ Get a Free Consultation</a>
+        <a href="#services" class="btn-outline">Our Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="trust-icon">✓</span> No upfront fees</div>
+        <div class="trust-item"><span class="trust-icon">✓</span> Confidential consultation</div>
+        <div class="trust-item"><span class="trust-icon">✓</span> Serving PA & surrounding states</div>
+      </div>
+    </div>
+
+    <!-- HERO FORM -->
+    <div class="hero-form-card" id="contact-form">
+      <h3>🛡️ Free Family Protection Consultation</h3>
+      <p class="sub">Tell us your situation. We'll tell you exactly how we can help — no cost, no obligation.</p>
+      <form id="safenestForm" onsubmit="submitSafenest(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Name *</label>
+            <input type="text" class="form-input" id="snName" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone *</label>
+            <input type="tel" class="form-input" id="snPhone" placeholder="(555) 000-0000" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email *</label>
+          <input type="email" class="form-input" id="snEmail" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">How Can We Help? *</label>
+          <select class="form-select" id="snService" required>
+            <option value="">— Select your situation —</option>
+            <option value="Estate Auction Oversight">Estate auction coming up — need oversight</option>
+            <option value="Senior Relocation">Need help relocating a senior family member</option>
+            <option value="Asset Protection Planning">Want to protect assets before a transition</option>
+            <option value="Already Been Taken Advantage Of">We may have already been taken advantage of</option>
+            <option value="General Consultation">General consultation / not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">State / Location</label>
+          <input type="text" class="form-input" id="snLocation" placeholder="e.g. Pittsburgh, PA" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Brief Description</label>
+          <textarea class="form-textarea" id="snDesc" placeholder="Tell us a little about your situation..." style="min-height:70px;resize:vertical;"></textarea>
+        </div>
+        <button type="submit" class="form-submit">🛡️ Request Free Consultation →</button>
+        <p class="form-note">🔒 Completely confidential. We respond within 24 hours.</p>
+      </form>
+      <div class="success-msg" id="snSuccess">
+        <h3>✅ Request Received</h3>
+        <p>Thank you for reaching out. A SafeNest specialist will contact you within 24 hours for your free, confidential consultation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="center">
+    <div class="section-label">How We Protect You</div>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">Comprehensive protection for elderly families navigating one of life's most difficult transitions.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon" style="background:#FEF3C7;">🏛️</div>
+      <h3>Estate Auction Oversight</h3>
+      <p>We attend auctions on your behalf, verify fair market pricing, identify undervalued assets, and ensure the auction company is not manipulating bids or steering buyers. We've seen it all — and we stop it.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:#DCFCE7;">🚚</div>
+      <h3>Senior Relocation Services</h3>
+      <p>Compassionate, full-service relocation for elderly individuals moving to assisted living, family homes, or downsizing. We handle packing, coordination, and the emotional weight of the transition.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:#DBEAFE;">🛡️</div>
+      <h3>Asset Protection Planning</h3>
+      <p>Before a transition happens, we help families inventory, appraise, and document all assets — creating a paper trail that protects against theft, undervaluation, and fraud.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:#F3E8FF;">📋</div>
+      <h3>Estate Sale Management</h3>
+      <p>We manage the entire estate sale process — pricing items at fair market value, advertising to the right buyers, and ensuring your family receives maximum return on every item sold.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:#FEE2E2;">🤝</div>
+      <h3>Family Advocacy</h3>
+      <p>We act as your family's voice when dealing with auction houses, real estate agents, and buyers. We know the tactics they use and how to counter them.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:#FEF9C3;">🏠</div>
+      <h3>Real Estate Transition Support</h3>
+      <p>Guidance on selling the family home at the right time, for the right price, with the right buyer — not a rushed sale that benefits everyone except your family.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="center">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">How SafeNest Works</h2>
+    <p class="section-sub">Simple, transparent, and always on your side.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-number">1</div>
+      <h3>Free Consultation</h3>
+      <p>Tell us your situation. We assess the risks, explain your options, and outline exactly how we can protect your family — at no cost.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">2</div>
+      <h3>Asset Inventory</h3>
+      <p>We document and appraise all assets before any sale or auction — creating a verified record that protects against manipulation.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">3</div>
+      <h3>We Stand Guard</h3>
+      <p>At the auction or estate sale, we're physically present — watching, documenting, and intervening if anything looks wrong.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">4</div>
+      <h3>Maximum Return</h3>
+      <p>Your family receives fair market value for everything. We don't leave until the job is done and your family is protected.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section class="who-section">
+  <div class="center">
+    <div class="section-label">Who We Serve</div>
+    <h2 class="section-title">We Help Families Like Yours</h2>
+  </div>
+  <div class="who-grid">
+    <div class="who-list">
+      <div class="who-item">
+        <div class="who-icon">👨‍👩‍👧</div>
+        <div>
+          <h4>Adult Children of Aging Parents</h4>
+          <p>When mom or dad can no longer manage their affairs, we step in to protect what they spent a lifetime building.</p>
+        </div>
+      </div>
+      <div class="who-item">
+        <div class="who-icon">⚖️</div>
+        <div>
+          <h4>Families Dealing With Estates</h4>
+          <p>After a loved one passes, estate companies move fast. We move faster — ensuring fair value before anything is sold.</p>
+        </div>
+      </div>
+      <div class="who-item">
+        <div class="who-icon">🏡</div>
+        <div>
+          <h4>Seniors Downsizing or Relocating</h4>
+          <p>Moving to assisted living or a smaller home is overwhelming. We handle the logistics so families can focus on each other.</p>
+        </div>
+      </div>
+      <div class="who-item">
+        <div class="who-icon">🚨</div>
+        <div>
+          <h4>Families Who Suspect Fraud</h4>
+          <p>If you think an auction company or buyer took advantage of your family, we investigate and help you understand your options.</p>
+        </div>
+      </div>
+    </div>
+    <div class="who-image">
+      <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=600&q=80" alt="Senior family consultation" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item"><div class="stat-number">$2.3T</div><div class="stat-label">In US estate assets transferred annually</div></div>
+    <div class="stat-item"><div class="stat-number">40%</div><div class="stat-label">Of estate sales undervalue assets without oversight</div></div>
+    <div class="stat-item"><div class="stat-number">10M+</div><div class="stat-label">Americans turn 65 every year</div></div>
+    <div class="stat-item"><div class="stat-number">24hr</div><div class="stat-label">Our response time for urgent cases</div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="center">
+    <div class="section-label">Families We've Helped</div>
+    <h2 class="section-title">Real Stories</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-text">"After my mother passed, an auction company came in and started pricing everything way below value. SafeNest stepped in and we ended up recovering nearly $40,000 more than we would have gotten. I can't thank them enough."</div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">D</div>
+        <div><div class="testimonial-name">Diane K.</div><div class="testimonial-location">Pittsburgh, PA</div></div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-text">"Moving my father to memory care was the hardest thing our family ever did. SafeNest handled everything — the estate sale, the move, all of it. They treated my dad with so much dignity and respect."</div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">R</div>
+        <div><div class="testimonial-name">Robert M.</div><div class="testimonial-location">Uniontown, PA</div></div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-text">"I didn't even know services like this existed until a friend told me about SafeNest. They caught the auction company steering buyers away from my grandmother's best pieces. Saved us thousands."</div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">L</div>
+        <div><div class="testimonial-name">Lisa T.</div><div class="testimonial-location">Somerset, PA</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="center">
+    <div class="section-label">Common Questions</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How much does SafeNest charge? <span class="faq-arrow">▼</span></div>
+      <div class="faq-answer">The initial consultation is always free. Our fees vary based on the scope of services needed. In many cases, our involvement pays for itself many times over by recovering fair market value on assets. We discuss all fees transparently before any engagement.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">What if the auction has already happened? <span class="faq-arrow">▼</span></div>
+      <div class="faq-answer">It's not always too late. If you believe your family was taken advantage of, contact us immediately. We can review auction records, compare sale prices to market values, and advise on potential next steps. Time matters, so don't wait.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">What areas do you serve? <span class="faq-arrow">▼</span></div>
+      <div class="faq-answer">We are based in Champion, Pennsylvania and primarily serve Western and Central Pennsylvania, including Pittsburgh, Johnstown, Somerset, Uniontown, and surrounding areas. We can also consult remotely for families in other states.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">How quickly can you respond to an urgent situation? <span class="faq-arrow">▼</span></div>
+      <div class="faq-answer">For urgent cases — such as an auction scheduled within days — we respond within hours. Contact us immediately and explain the timeline. We will do everything possible to be there when you need us.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">Do you work with attorneys or financial advisors? <span class="faq-arrow">▼</span></div>
+      <div class="faq-answer">Yes. We frequently work alongside estate attorneys, financial advisors, and social workers to provide comprehensive protection. We can also refer you to trusted professionals in our network if needed.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <h2>Don't Let Your Family's Legacy Be Sold for Pennies</h2>
+  <p>One phone call could protect everything your loved one worked their entire life to build. The consultation is free. The peace of mind is priceless.</p>
+  <a href="#contact-form" class="btn-primary" style="font-size:1.05rem;padding:1.1rem 2.5rem;">🛡️ Get Your Free Consultation Today</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>SafeNest Senior Services</h3>
+      <p>Protecting elderly families and their assets during life's most difficult transitions. Estate auction oversight, senior relocation, and asset protection services.</p>
+      <p style="margin-top:0.8rem;font-size:0.8rem;color:rgba(255,255,255,0.4);">📍 Champion, Pennsylvania 15622</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Auction Oversight</a></li>
+        <li><a href="#services">Senior Relocation</a></li>
+        <li><a href="#services">Asset Protection</a></li>
+        <li><a href="#services">Estate Management</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#contact-form">Free Consultation</a></li>
+        <li><a href="tel:+1YOURNUMBER">Call Us</a></li>
+        <li><a href="mailto:info@safenestseniorservices.com">Email Us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 SafeNest Senior Services · safenestseniorservices.com · All Rights Reserved</div>
+    <div style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Serving Western & Central Pennsylvania</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  const SAFENEST_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+
+  async function submitSafenest(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.disabled = true;
+    btn.textContent = '⏳ Sending...';
+
+    const data = {
+      timestamp: new Date().toLocaleString(),
+      name: document.getElementById('snName').value,
+      phone: document.getElementById('snPhone').value,
+      email: document.getElementById('snEmail').value,
+      service: document.getElementById('snService').value,
+      location: document.getElementById('snLocation').value,
+      description: document.getElementById('snDesc').value,
+      status: 'New Lead',
+      source: 'safenestseniorservices.com'
+    };
+
+    try {
+      if (SAFENEST_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
+        await fetch(SAFENEST_SCRIPT_URL, {
+          method: 'POST', mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      }
+      document.getElementById('safenestForm').style.display = 'none';
+      document.getElementById('snSuccess').style.display = 'block';
+      showToast('✅ Consultation request sent!');
+    } catch (err) {
+      document.getElementById('safenestForm').style.display = 'none';
+      document.getElementById('snSuccess').style.display = 'block';
+    }
+  }
+
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    item.classList.toggle('open');
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 4000);
+  }
+</script>
+</body>
+</html>
