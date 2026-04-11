@@ -114,7 +114,23 @@ export default function Home() {
             </button>
           </form>
         </div>
-      </div>
+           {/* Donation Section */}
+        <div>
+          <h2>Support Trend_Pulse</h2>
+          {/* TODO: Insert Stripe Payment Link for Donation button */}
+          <button disabled>Donate</button>
+        </div>
+
+        {/* Subscription Tiers */}
+        <div>
+          <h2>Subscription Tiers</h2>
+          {/* TODO: Insert Stripe Payment Links for Subscription tiers */}
+          <ul>
+            <li>Basic Tier – Coming Soon</li>
+            <li>Premium Tier – Coming Soon</li>
+          </ul>
+        </div>
+   </div>
     </div>
   );
 }
