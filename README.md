@@ -37,7 +37,11 @@ Create a `.env.local` file and add your environment variables:
 NEXT_PUBLIC_PROJECT_NAME="Your App Name"
 NEXT_PUBLIC_ONCHAINKIT_API_KEY=<Replace-WITH-YOUR-CDP-API-KEY>
 NEXT_PUBLIC_URL=
+NEXT_PUBLIC_DEMO_VIDEO_URL=https://www.youtube.com/embed/your-video-id
+BOOKING_WEBHOOK_URL=https://prod-00.westus.logic.azure.com/...
 ```
+
+`BOOKING_WEBHOOK_URL` should point to your Power Automate/Zapier webhook that writes booking rows to the MCCNow Excel calendar sheet.
 
 ### 4. Run locally:
 
