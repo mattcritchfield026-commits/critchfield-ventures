@@ -33,12 +33,17 @@ function doPost(e) {
         'Preferred Date',
         'Project Description',
         'How They Found Us',
+        'Ad Source (UTM)',
+        'Ad Medium',
+        'Ad Campaign',
+        'Ad Content',
+        'Landing Page URL',
         'Status',
         'Notes'
       ]);
       
       // Style the header row
-      var headerRange = sheet.getRange(1, 1, 1, 12);
+      var headerRange = sheet.getRange(1, 1, 1, 17);
       headerRange.setBackground('#F5A623');
       headerRange.setFontColor('#0A1628');
       headerRange.setFontWeight('bold');
@@ -60,12 +65,17 @@ function doPost(e) {
       data.preferredDate || '',
       data.description || '',
       data.source || '',
+      data.utm_source || 'direct',
+      data.utm_medium || 'none',
+      data.utm_campaign || 'none',
+      data.utm_content || 'none',
+      data.landing_page || '',
       data.status || 'New Lead',
       '' // Notes column — empty for Matt to fill in
     ]);
     
     // Auto-resize columns for readability
-    sheet.autoResizeColumns(1, 12);
+    sheet.autoResizeColumns(1, 17);
     
     // Send email notification to Matt
     sendNotificationEmail(data);

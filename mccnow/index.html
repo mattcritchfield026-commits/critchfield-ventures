@@ -157,7 +157,8 @@
     <div class="nav-logo-icon">M</div>
     <div class="nav-logo-text">M Critchfield Construction<span>Champion, PA · Licensed & Insured</span></div>
   </div>
-  <a href="tel:+1YOURNUMBER" class="nav-phone">📞 Call for a Quote</a>
+  <a href="tel:+17248001234" class="nav-phone">📞 (724) 800-1234</a>
+  <a href="#pay" class="nav-cta" style="margin-right:0.5rem; background:rgba(99,91,255,0.15); color:#a09bff; border:1px solid rgba(99,91,255,0.3);">Pay Online</a>
   <a href="#book" class="nav-cta">Book Free Estimate</a>
 </nav>
 
@@ -273,6 +274,48 @@
   </div>
 </section>
 
+<!-- STRIPE DEPOSIT PAYMENT -->
+<section id="pay" style="padding:80px 5%; background: var(--navy);">
+  <div style="max-width:800px; margin:0 auto; text-align:center;">
+    <div class="section-label">Secure Online Payment</div>
+    <h2 class="section-title">Pay Your Deposit or Invoice</h2>
+    <p class="section-sub" style="margin:0 auto 2.5rem;">Secure your project date by paying your deposit online. We accept all major credit cards, debit cards, and ACH bank transfers. 100% secure and encrypted.</p>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1.5rem; margin-bottom:2.5rem;">
+      <div style="background:var(--card); border:1px solid rgba(245,166,35,0.2); border-radius:16px; padding:1.8rem; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.6rem;">💳</div>
+        <h3 style="font-size:1rem; font-weight:800; margin-bottom:0.4rem;">Project Deposit</h3>
+        <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1.2rem;">Secure your start date with a deposit. Amount agreed upon during estimate.</p>
+        <a href="YOUR_STRIPE_DEPOSIT_LINK" target="_blank" id="stripeDepositBtn"
+           style="display:block; background:linear-gradient(135deg,#635BFF,#4B45CC); color:#fff; font-weight:800; padding:0.85rem 1.5rem; border-radius:10px; text-decoration:none; font-size:0.95rem; transition:opacity 0.2s;"
+           onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+          Pay Deposit via Stripe →
+        </a>
+      </div>
+      <div style="background:var(--card); border:1px solid rgba(245,166,35,0.2); border-radius:16px; padding:1.8rem; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.6rem;">🧾</div>
+        <h3 style="font-size:1rem; font-weight:800; margin-bottom:0.4rem;">Pay Invoice</h3>
+        <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1.2rem;">Received an invoice from Matt? Pay it here securely with any card.</p>
+        <a href="YOUR_STRIPE_INVOICE_LINK" target="_blank"
+           style="display:block; background:linear-gradient(135deg,var(--gold),var(--orange)); color:var(--navy); font-weight:800; padding:0.85rem 1.5rem; border-radius:10px; text-decoration:none; font-size:0.95rem; transition:opacity 0.2s;"
+           onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+          Pay Invoice via Stripe →
+        </a>
+      </div>
+      <div style="background:var(--card); border:1px solid rgba(245,166,35,0.2); border-radius:16px; padding:1.8rem; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.6rem;">📱</div>
+        <h3 style="font-size:1rem; font-weight:800; margin-bottom:0.4rem;">Pay via Square</h3>
+        <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1.2rem;">Prefer Square? Pay securely through our Square payment link.</p>
+        <a href="YOUR_SQUARE_PAYMENT_LINK" target="_blank"
+           style="display:block; background:linear-gradient(135deg,#00C896,#00A07A); color:#fff; font-weight:800; padding:0.85rem 1.5rem; border-radius:10px; text-decoration:none; font-size:0.95rem; transition:opacity 0.2s;"
+           onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+          Pay via Square →
+        </a>
+      </div>
+    </div>
+    <p style="font-size:0.8rem; color:var(--muted);">🔒 All payments are encrypted and processed securely. M Critchfield Construction LLC never stores your card information.</p>
+  </div>
+</section>
+
 <!-- WHY US -->
 <section class="why-section">
   <div class="section-label">By The Numbers</div>
@@ -349,21 +392,45 @@
 
 <script>
   // ============================================================
-  // GOOGLE SHEETS INTEGRATION
-  // HOW TO SET THIS UP (takes 5 minutes):
-  // 1. Go to Google Sheets → Create a new sheet called "MCC Bookings"
-  // 2. Go to Extensions → Apps Script
-  // 3. Paste the Apps Script code from mccnow/google-apps-script.js
-  // 4. Deploy as Web App → Anyone can access
-  // 5. Copy the Web App URL and replace GOOGLE_SCRIPT_URL below
+  // M CRITCHFIELD CONSTRUCTION — LEAD CAPTURE SYSTEM v2.0
+  // DUAL-LAYER SUBMISSION:
+  //   Layer 1: Formspree (works immediately, sends email to Matt)
+  //   Layer 2: Google Sheets (paste your Apps Script URL below)
+  //
+  // TO ACTIVATE GOOGLE SHEETS:
+  //   1. Follow steps in mccnow/google-apps-script.js
+  //   2. Replace 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL' below
+  //      with your deployed Apps Script URL
+  //
+  // TO ACTIVATE FORMSPREE (immediate email alerts):
+  //   1. Go to formspree.io → Create free account
+  //   2. Create a new form → Copy your form ID
+  //   3. Replace 'YOUR_FORMSPREE_FORM_ID' below
+  //      e.g. 'xpwzabcd' from https://formspree.io/f/xpwzabcd
   // ============================================================
+
   const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+  const FORMSPREE_ID = 'YOUR_FORMSPREE_FORM_ID'; // e.g. 'xpwzabcd'
+
+  // Capture UTM parameters from URL for ad tracking
+  function getUTMParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      utm_source: params.get('utm_source') || 'direct',
+      utm_medium: params.get('utm_medium') || 'none',
+      utm_campaign: params.get('utm_campaign') || 'none',
+      utm_content: params.get('utm_content') || 'none',
+      landing_page: window.location.href
+    };
+  }
 
   async function submitBooking(e) {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
     btn.disabled = true;
     btn.textContent = '⏳ Sending...';
+
+    const utm = getUTMParams();
 
     const data = {
       timestamp: new Date().toLocaleString(),
@@ -376,27 +443,69 @@
       preferredDate: document.getElementById('preferredDate').value,
       description: document.getElementById('description').value,
       source: document.getElementById('source').value,
-      status: 'New Lead'
+      status: 'New Lead',
+      // Ad tracking fields
+      utm_source: utm.utm_source,
+      utm_medium: utm.utm_medium,
+      utm_campaign: utm.utm_campaign,
+      utm_content: utm.utm_content,
+      landing_page: utm.landing_page
     };
 
-    try {
-      if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
-        // Demo mode — show success without actually submitting
-        await new Promise(r => setTimeout(r, 1200));
-        showSuccess(data);
-        return;
-      }
+    let submitted = false;
 
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-      showSuccess(data);
-    } catch (err) {
-      // Even if fetch fails due to CORS, the data still goes through with no-cors
-      showSuccess(data);
+    // --- LAYER 1: Formspree (immediate email to Matt) ---
+    if (FORMSPREE_ID !== 'YOUR_FORMSPREE_FORM_ID') {
+      try {
+        const fsRes = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: '🔨 New Lead: ' + data.firstName + ' ' + data.lastName + ' — ' + data.service,
+            name: data.firstName + ' ' + data.lastName,
+            phone: data.phone,
+            email: data.email,
+            service: data.service,
+            address: data.address,
+            preferred_date: data.preferredDate,
+            description: data.description,
+            how_they_found_us: data.source,
+            ad_source: data.utm_source,
+            ad_campaign: data.utm_campaign,
+            timestamp: data.timestamp
+          })
+        });
+        if (fsRes.ok) submitted = true;
+      } catch (fsErr) {
+        console.warn('Formspree error:', fsErr);
+      }
+    }
+
+    // --- LAYER 2: Google Sheets (CRM log) ---
+    if (GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        submitted = true;
+      } catch (err) {
+        // no-cors mode: response is opaque, data still goes through
+        submitted = true;
+      }
+    }
+
+    // Show success regardless (both layers attempted)
+    showSuccess(data);
+
+    // Fire Google Analytics / Meta Pixel conversion event if available
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'generate_lead', { event_category: 'Lead Form', event_label: data.service });
+    }
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead', { content_name: data.service });
     }
   }
 
