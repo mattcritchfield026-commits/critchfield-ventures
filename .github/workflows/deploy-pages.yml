@@ -1,9 +1,14 @@
-name: Deploy GitHub Pages
+name: Deploy GitHub Pages — Critchfield Ventures
+
+# Deploys all static business sites from the repo root:
+#   /mccnow/    → mccnow.net
+#   /foyera/    → foyera.online
+#   /pawcoins/  → pawcoins.us
+#   /safenest/  → safenestseniorservices.com
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,30 +17,18 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build Next.js static export
-        run: npm run build
-        env:
-          NEXT_PUBLIC_PROJECT_NAME: "Critchfield Ventures"
-          NEXT_PUBLIC_URL: "https://mattcritchfield026-commits.github.io/critchfield-ventures"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -43,15 +36,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out'
+          path: '.'
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
